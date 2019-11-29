@@ -1,0 +1,426 @@
+
+
+\documentclass[twoside,onecolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+%\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Running title $\bullet$ May 2016 $\bullet$ Vol. XXI, No. 1} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{amsmath}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+
+
+\title{Global cerebral atrophy in healthy aging: a 6 year longitudinal study } % Article title
+\author{%
+\textsc{Jaime Gómez-Ramírez et al.}\thanks{} \\[1ex] % Your name
+\normalsize Fundación CIEN \\ % Your institution
+\normalsize \href{mailto:john@smith.com}{jgomez@fundacioncien.es} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+
+
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+%We study the causal relationship between brain atrophy and cognition, in particular between the inter annual reduction in brain volume and the clinical diagnosis (healthy, MCI and dementia). 
+We study the dynamics of whole brain atrophy in a group of 460 elderly healthy subjects 70+ years old. The average interannual whole brain atrophy is $0.5\%$ . The variance in the atrophy increases with the age.
+
+We are lacking a consensuated definition of healthy brain aging
+
+***Time Line:
+
+Autopsies (thousands, dead organ) -- CAT and MRI with manual outlining (bias and operator error) --Computational neuroanatomy
+
+***Cross Sectional vs Longitudinal
+
+LONGITUDINAL
+
+
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\lettrine[nindent=0em,lines=3]{I} n this study we track the progressive cerebral atrophy (the percent brain volume change (PBVC)) in elderly healthy subjects in a 6 years period.
+We use longitudinal data of MRI to study whether brain atrophy is a predictor of cognitive impairment at the time of the study or in the future. We model brain atrophy accumulated loss the atrophy velocity and we relate these two parameters with the cognitive health of the subjects. 
+
+The goal is to study the causal relationship between brain atrophy and cognition, in particular between the inter annual reduction in brain volume and the clinical diagnosis (healthy, MCI and dementia). We study the confounding factors age and APOE to define a causal model between brain atrophy and cognitive performance (clinical diagnosis and cognitive test scores). 
+
+%%
+%State fo the Art
+%Historical introduction:: Autopsies --> MRI --> Computational Anatomy
+The earliest evidence of the effect of aging on brain size (structure) comes form autopsy studies (XIX century) that indicated that brain weight reduced surely but slowly but these studies are unreliable.
+%Autopsies
+It is commonly believed that brain weights are stable between the ages of 20 and 50 but fell progressively thereafter. Studies with large number of autopsies show that brain weight reached its maximum in the late teens and declines very slowly ($0.1-0.2\%$ a year) till the 60-70s were the decline is faster.
+%Age better modulator than sex 
+In \cite{ho1980analysis} weights of fresh brains of 1,261 subjects, aged 25 to 80 years, showed that the mass decreases rapidly after age 80 years. It also indicated  different atrophy based on sex and gender: "the rate of decrease for the brain weight after age 25 years is highest for white men, followed by black women, white women, and black men, and, except that between white men and white women, the differences are statistically insignificant.""
+"Progressive decline in brain weight begins at about 45 to 50 years of age and reaches its lowest values after age 86 years, by which time the mean brain weight has decreased by about $11\%$ relative to the maximum brain weight attained in young adults (about 19 years of age)." \cite{dekaban1978changes}. The study regressed brain weights versus age and sex groups and show clearly differential rates of change in brain weights (age) which are less affected by sex.
+"Later studies, but still prior to MRI era, with thousands of autopsies suggested that brain weight peaks by the mid-to-late teens and declines slowly (0·1–0·2\% a year) until age 60–70, after which losses accelerate.""
+
+However, studies based on  autopsies are unfitted to shed light on cerebral atrophy in living individuals, the advent of non-invasive imaging changed this.
+% --> Computational Anatomy (VBM)
+%"ashburner2003computer ::Computerised methods are being developed that can capture the extraordinary morphological variability of the human brain. These methods use mathematical models sensitive to subtle changes in the size, position, shape, and tissue characteristics of brain structures affected by neurodegenerative diseases"
+"computed tomography and then MRI provided the opportunity to assess cerebral volume non-invasively and repeatedly" and in vivo \cite{fox2004imaging}.
+Imaging studies revealed global volume loss and regional variation in the effects of ageing on the brain. Nevertheless, these were prone to error because need manual outlining and furthermore had a strong bias in the a priori selection of the areas to assess.
+Computational anatomy changed this \cite{ashburner2003computer}.
+"Voxel-based-morphometry (VBM) is a whole-brain, unbiased technique for characterizing regional cerebral volume and tissue concentration differences in structural magnetic resonance images.  In 465 normal adults tissue based segmentation to study the effects of ageing on grey and white matter and CSF. Global grey matter volume decreased linearly with age, with a significantly steeper decline in males. Local areas of accelerated loss were observed bilaterally in the insula, superior parietal gyri, central sulci, and cingulate sulci. Areas exhibiting little or no age effect (relative preservation) were noted in the amygdala, hippocampi, and entorhinal cortex. Global white matter did not decline with age." \cite{good2001voxel}
+"176 normal individuals ranging in age from 7 to 87 years.  "Visual, auditory and limbic cortices, which are known to myelinate early, showed a more linear pattern of aging than the frontal and parietal neocortices, which continue myelination into adulthood. Our findings also indicate that the posterior temporal cortices, primarily in the left hemisphere, which typically support language functions, have a more protracted course of maturation than any other cortical region."\cite{sowell2003mapping}""
+
+% Longitudinal
+
+"REVIEW Little is still known about the neuroanatomical substrates related to changes in specific cognitive abilities in the course of healthy aging, and the existing evidence is predominantly based on cross-sectional studies. However, to understand the intricate dynamics between developmental changes in brain structure and changes in cognitive ability, longitudinal studies are needed. " \cite{oschwald2019brain}  "the number of studies presenting converging evidence is small, and the large methodological variability between studies precludes general conclusions."" 
+
+All the above are x-sectional studies overall seems that the aging brain losses volume in a non-linear and  regional dependent way, with prefrontal cortical volumen declinign more rapidly than other brain regions \cite{thompson2003dynamics}.
+"Cross-sectional studies are limited: there is large inter-individual variation in brain size and structure; the pro-gression and rate of atrophy can only be inferred from a one-off scan; and it must be assumed that progression of brain ageing is similar between in- dividuals. Longitudinal studies, by using subjects as their own control, allow progression of atrophy to be quantified at the individual level. "
+
+"Longitudinal Study covering 8 years of longitudinal change (across 5 occasions) in cortical thickness in 249 midlife  and older adults (52-95 years old). longitudinal thinning was significantly altered by hypertension and Apolipoprotein-E e4 (APOEe4), varying by location: Frontal and Cingulate thinned more rapidly in APOEe4 carriers.  longitudinal thinning was 3 times greater than cross-sectional estimates of age-related differences in thickness in parietal and occipital cortices\cite{rast2017apoevarepsilon4}
+"With regard to subcortical structures the decline is nonlinear accross chronological age in hippocampus, caudate but linear decline slopes for thalamus, accumbens \cite{fjell2010structural}. This needs to be interpreted with caution -lower reliability for small structures. " 
+
+Longitudinal imaging (MRI) studies show that rates of global atrophy in healthy people increase gradually with age from an annual rate of $0.2\%$ a year at age 30–50 to $0.3-0.5\%$ at age $70-80$. But in  \cite{scahill2003longitudinal} (39 healthy control subjects (age range, 31-84 years) anecdotal results small sample "This increase in rates after 70 years of age was particularly marked in the ventricles  and the hippocampi" Scahill finds a significant age-associated decrease in global and regional brain volumes.
+
+45 subjects were separated into two groups, those who did and those who did not show objective evidence of cognitive decline in a 6 year three-time points longitudinal study. \cite{rusinek2003regional}. The conclusion was that among healthy elderly (32 healthy vs 13 decline) individuals, increased MTL atrophy rate appears to be predictive of future memory decline.
+
+18 amnestic MCI patients were followed-up for a predefined fixed period of 18 months and conversion was judged according to NINCDS-ADRDA criteria for probable AD (2 time points 18 subjects) \cite{chetelat2005using}, VBM to compare baseline imaging data of converters to those of non-converters. "There was significantly greater GM loss in converters relative to non-converters in the hippocampal area, inferior and middle temporal gyrus, posterior cingulate, and precuneus. This accelerated atrophy may result from both neurofibrillary tangles accumulation and parallel pathological processes such as functional alteration in the posterior cingulate."
+
+"(ADNI 2 time points) MCI participants that converted to AD (average follow-up 15 months) displayed significantly lower volumes in a number of GM regions, as well as in the WM (\cite{misra2009baseline}
+
+"1,982 MS patients (mean follow‐up: 4.8 years) and 351 HI (mean follow‐up: of 3.1 years), aged from 20 to 79 years old (yo) Development of brain atrophy manifests progressively in MS patients, and occurs with a different pattern, as compared to aging HI" \cite{ghione2019aging}" There was a significant aging interaction effect in the annualized PLVVC (P = .001) between HI and MS patients, which was not observed for the annualized PBVC (P = .380). PBVC decreased across ages in both HI and MS."
+
+In evaluating an individual brain weight, it is important to compare it with the norm for each subgroup of a given age. There is some evidence of secular increases in human brain (comparing subjects born  in 1860 to 1940 -7397 post-mortem records-) \cite{miller1977evidence}.
+
+
+\section{Questions}
+YS: add feature of cognitive health:: Buschke test eg.
+
+"In Alzheimer’s disease, annual rates of global brain atrophy are about $2–3\%$, compared with $0·2–0·5\%$ in healthy controls."
+Fig 2 curve metaphoric, need to improve this way of representing data!
+
+YS: Those call to get sick,  Normal ageing, and very healthy individual what are the differences in global cerebral atrophy
+
+YS: Which phenotype presentations are associated with loss velocity?
+%Longitudinal studies of apparently healthy individuals suggest that hippo- campal atrophy rates increase from around 0·1–0·2% a year in those aged 30–50, to 0·8% in those in their mid-70s, rising further to 1·5–2% a year at 80–90.22,30,32
+
+%Because hippocampal atrophy accelerates several years before diagnostic criteria for Alzheimer’s disease are fulfilled, without extended follow- up it is not possible to be certain that some individuals in studies of “normal” ageing were not already in the earliest stages of Alzheimer’s disease.
+%Individuals at risk of neurodegeneration on the basis of age, genetics, or family history, could have a baseline scan which could be compared with a follow-up scan if there was any question of cognitive decline. 
+The common believe that "Brain atrophy accelerates at the age of 60 in healthy individuals" needs a stronger basis.
+
+%YS Ghione study annualized PBVC p>0.05 for HI and MS patientss
+
+%YS Classification of MCI vs non MCI with global atrophy only
+
+%Calculate acceleration atrophy = a12, a23, a34, a45;  times= t1,t2,t3,t4, velocity= __,
+%acceleration acc= acc1,acc2,acc3,acc4
+
+The current definition of healthy aging provided by the WHO is more inclusive than the more general definition of health (absence of disease WHO, 1946).
+"Importantly, the choice of the length of the time intervals substantially influences the magnitude of the parameters estimated in traditional statistical models for the analysis of longitudinal data "
+% Wnhats the best way to measure interindivual variability?
+
+Scaffolding Theory of Aging and Cognition. 
+
+"The GM volume gradually declines across the adult lifespan, however, the onset and the dynamics (linear, quadratic) is unknown and depends on the brain region studied".
+"X-sectional show a LIFO patter, anterior regions (PFC) the latest to mature and the first to show age-related deficits, and posterior regions that mature early in development (eg visual auditory cortex) being less vulnerable to GM atrophy."This pattern of structural brain differences is conformed in longitudinal studies, with the exception of medio temporal regions (the hippocampus, amygdala) moderate reduction in young adults and substantial decline in older adults".
+"Cortical thickness contributes more strongly to GM volume changes in old age than surface area \cite{storsve2014differential}"
+
+
+
+"The structure of the brain is constantly changing from birth throughout the lifetime, meaning that normal aging, free from dementia, is associated with structural brain changes  \cite{fjell2010structural}.(the brain shrinks in volume and the ventricular system expands in healthy aging)However, the pattern of changes is highly heterogeneous, with the largest changes seen in the frontal and temporal cortex.  changes in cortical thickness and subcortical volume can be tracked over periods as short as one year, with annual reductions of between $0.5\%$ and $1.0\%$ in most brain areas"
+"the volumetric brain reductions in healthy aging are likely only to a minor extent related to neuronal loss. Rather, shrinkage of neurons, reductions of synaptic spines, and lower numbers of synapses probably account for the reductions in grey matter. In addition, the length of myelinated axons is greatly reduced, up to almost $50\%$. "
+
+"Similar to GM, the onset of WM decline is region-specific. WM follows a nonlinear development pattern across adult lifespan, with increases around 50 and accelerated age-differences or decline thereafter. Besides volumetric deficits, WM degradation in the course of healthy aging manifests itself also as declines in microstructural properties of WM fiber tracts (measured with DW-MRI) and as an accumulation of WMH"
+"CSF volume is larger in older compared to younger adults and the CSF-filled ventricles appear to expand quadratically over lifespan"
+
+"Depending on whether CSF is included in these measures or not one can dissociate total brain volume (TBV) from intracranial volume (ICV)
+
+
+Whole Brain volume
+%%%%%%%%%%%%%%%%%%
+Depending on whether CSF is included one can dissaociate TBV from ICV. Also there is a normalized TBV (NBV) for some estimate of the head size. NBV is widely used as an index for brain atrophy, as head size remains stable across life span and serves as a good measure to reduce between-subject differences with regard to maximum brain size.
+"whole brain volume changes throughout the life span. A wave of growth occurs during childhood/adolescence, where around 9 years of age a $1\%$ annual brain growth is found which levels off until at age 13 a gradual volume decrease sets in. During young adulthood, between 18 and 35 years of age, possibly another wave of growth occurs or at least a period of no brain tissue loss. After age 35 years, a steady volume loss is found of $0.2\%$ per year, which accelerates gradually to an annual brain volume loss of $0.5\%$ at age 60. The brains of people over 60 years of age show a steady volume loss of more than $0.5\%$ \cite{hedman2012human}"
+
+Evidence shows that age imposes a stronger influence on brain structure in older than in younger adults, but the onset and the type of decline (linear, ....) depends on the type of tissue and the region.
+"Roughly, GM atrophy onset is estimated at earlier ages, while WM remains relatively stable until old age. Last-in First-out: a mean trend towards higher vulnerability of anterior, late developing regions as opposed to posterior, early developing regions is reported by several studies of WM and GM aging"
+"PLASTICITY:: A premise of STAC-r is that life course experiences of various kinds shape brain structure besides the mere influence of passing time. Assuming that the brain remains plastic up into higher ages, variability between healthy aging indi- viduals with regard to the onset and shape of brain struc- ture change can be expected (i.e. including maintenance and growth as potential trajectories) The finding of pre- dominantly nonlinear average trajectories for many brain structures (e.g. cortical thickness, subcortical GM, WM) lends some support to this hypothesis."
+
+
+
+Memory
+" longitudinal evidence suggests that semantic memory increases or remains stable at least until age 55 \cite{ronnlund2005stability}
+Longitudinal findings from the Berlin Aging Study demonstrated stability in verbal knowledge even up to the age of 90 \cite{park2002models}."
+"vocabulary knowledge (semantic memory) might be more strongly influenced by experience (i.e. education, frequent social interactions or reading the newspaper) and thus more adept to compensatory maintenance than the ability to complete a task as fast as possible (process- ing speed). The latter might thus rely more on a youth- ful brain structure and function. "
+
+"As scaffolding is a regulatory process that occurs within individuals over time, only longitudinal studies can directly capture this process. his might also explain why longitudinal studies report stability of cognitive ability into much higher ages. Specifically, accelerated cognitive declines (e.g. of episodic memory, processing speed) observed in longitudinal studies could reflect a turning point when compensatory mechanisms start to lose their functionality (e.g. due to degradation of the frontal cortex)."
+
+
+"cross-sectional studies typically correlate a measure of brain structure and a measure of cognitive ability while controlling for age.these studies show a trend toward a positive brain-cognition correlation suggesting that people with larger brain volumes, a thicker cortex, or better WM health (i.e. less WMH load, more intact WM microstructure) on average perform better in a variety of cognitive tasks, independent of their age."
+
+"longitudinal studies are necessary to draw inferences about the inter- relation of change trajectories in brain structure and cognition over time"
+
+"participants with lower levels of episodic memory performance at baseline, or decreases therein, showed on average steeper decline in whole brain volume. "
+
+"Based on STAC-r, we expected associations between brain structure and cognitive ability to be weak especially in healthy older adults as they should be able to compensate for age-related brain atrophy and thus maintain cognitive performance"
+
+
+%The Hammer and the Feather https://www.youtube.com/watch?v=4mTsrRZEMwA
+%With the lunar module and a mountain as a backdrop, David Scott recreates Galileo's famous gravity experiment in a low-gravity vacuum by letting a hammer and falcon's feather fall to the ground.
+
+%https://www.khanacademy.org/science/ap-physics-1/ap-centripetal-force-and-gravitation/newtons-law-of-gravitation-ap/v/would-a-brick-or-feather-fall-faster
+
+%http://cognitivemedium.com/f-ma
+
+%------------------------------------------------
+
+\section{Methods}
+\subsection{Curve fitting}
+We get the estimated brain loss volume starting with the first MRI (visit year 1). We fit a curve for 6 points age 19 (assumed $100\%$ vol.) the remaining vol at age visit 1 (eg 0.7) and 4 more points with the loss measured by Siena at age $70+ k, 75+k$, where k = visit1 - 70. Thus, the points that need to be fitted are: 
+$v_19, v_{v1}, v_{v2-v1},v_{v3-v2},v_{v4-v3},v_{v5-v5}$ where $v_19 = 1.0$, the remaining brain volume between two visits is calculated as:
+$v_v1 \prod_{i=1}^{4}(1-r_{i,i+1})$ where $v_v1$ is the remaining volume (Freesurfer) and $r_{i,i+1}$ is the inter-annual loss (atrophy) calculated by Siena.
+Now we fit the curve that goes through the 6 points, the origin is the same for all subjects since we assume that the maximum size is at 19 yo. 
+What shape the brain aging measured as volume loss has? We cant possibly now, gravitational force is quadratic, we can approximate aging as a quadratic function as well, other candidates are exponential, logarithmic.
+
+
+
+\subsection{Galilean Brain}
+According to Galileo, two bodies of different masses, dropped from the same height, will touch the floor at the same time in the absence of air resistance.
+The force at work, gravity, mg = ma, a=g,  since they are accelerated the same and start with the same initial conditions (at rest and dropped from a height h) they will hit the floor at the same time.
+
+The mass, size, and shape of the object are not a factor in describing the motion of the object. So all objects, regardless of size or shape or weight, free fall with the same acceleration. In a vacuum, a beach ball falls at the same rate as an airliner. 
+
+
+%https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=ind02&L=FSL&P=R35184&X=EE4112CAF7CA98FBD8&Y=borriquear%40gmail.com
+%SIENAX bypasses the problem of differentiating CSF and
+%skull by normalising using head size (via registration to the MNI152)
+%instead W+G+CSF.You CAN find the estimated CSF volume by running avwstats on the pve_0
+%image but as you point out in cases of severe atrophy some peripheral CSF
+%will get disregarded this way.
+%Your other suggestion is also a possibility - if you divide the MNI152
+%"ICV" (on the basis of adding up the standard space apriori maps and
+%thresholding at totalP=0.5 I have just estimated this as 1847712 mm^3) by
+%the SIENAX volumetric scaling factor then you could use that.
+
+%https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=FSL;d7959111.0911
+%It is possible to use BET to calculate the brain volume but not the intercranial volume.
+%Instead the best way to measure the ICV is by using SIENAX to derive a normalising factor which is based on the skull (and hence ICV). 
+%SIENAX is a package for single-time-point ("cross-sectional") analysis of brain change, in particular, the estimation of atrophy (volumetric loss of brain tissue) 
+%SIENAX estimates total brain tissue volume, from a single image, normalized for skull size. 
+
+%https://www.fmrib.ox.ac.uk/datasets/techrep/tr04ss2/tr04ss2/node14.html
+%SIENA has also been extended to a single-time-point method (SIENAX [35]) which estimates atrophy state rather than atrophy rate. 
+%SIENAX uses brain extraction and tissue-type segmentation to find brain volume and then brain-and-skull-based registration (similar to that used by SIENA) to normalise (for head size) to standard space (using the skull image for the scaling), to reduce inter-subject variability. SIENAX has been shown to be accurate to better than 1% error in normalised brain volume. 
+
+%https://www.jiscmail.ac.uk/cgi-bin/webadmin
+volume scaling that *is* based on the skull. 
+You can take
+to get an estimate of the ICV of that subject. It isn't a highly accurate
+estimate of the ICV but it is *not* based on the brain volume and so is
+useful for normalising brain volumes and controlling for head size.
+It is how sienax converts individual volumes to normalised volume
+
+YS: Do Sianx to calculate the atrophy for the baseline!
+
+We perform longitudinal extraction of brain volume to calculate the inter annual atrophy of brain volume using FSL SIENA.
+
+%https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/SIENA/UserGuide
+
+The atrophy is calculated as the difference between brain volume normalized by the time passed between the two MRI scans in years. 
+
+
+\subsection{percent brain volume change (PBVC)}
+The accumulated percent brain volume change for any two tome points is calculated as follows.
+
+\begin{equation} \label{eq:xij}
+\begin{split}
+X_{0} & = BV \\ 
+X_{12} & = X_{0}(1 + \Delta_{12}) \\ 
+X_{23} & = X_{12}(1 + \Delta_{23}) \\ 
+X_{34} & = X_{23}(1 + \Delta_{34}) \\
+X_{45} & = X_{34}(1 + \Delta_{45})
+\end{split}
+\end{equation}
+where BV (e.g. 100) is the initial brain volume which is known and $\Delta_{12}$ percent brain volume change (PBVC) between two time points. Thus, the general expression of percent brain volume change (PBVC) is: 
+
+\begin{align} 
+X_{i,j} = \prod_{k=i}^{k=j} (1+ \Delta_{k,k+1})
+\label{eq:accloss}
+\end{align} 
+
+\subsection{percent brain volume change velocity (PBVCv)}
+We calculate the percent brain volume change velocity (PBVCv) as the interannual atrophy, that is, the percent brain volume change per year. 
+
+\begin{align*} 
+\dot{X}_{i,j} & = X_{i,j}/(T_j-T_i) \\ 
+\end{align*} 
+where $T_j$ is the time in years, for example the PBVCv measured between year 4 and year 2 is $\dot{X}_{2,4} = X_{2,4}/(2-4)$ 
+
+\subsection{percent brain volume change acceleration (PBVCa)}
+The percent brain volume change acceleration (PBVCa) is
+\begin{align*} 
+\dot{X}_{i,j} & = X_{i,j}/(T_j-T_i)^{2} \\ 
+\end{align*} 
+
+%here diagrams 
+%------------------------------------------------
+
+%YS: Get the csv with all the required columns
+%Get the atrophy normalized in years
+%% determine which diagnostics column used and then build correlation atrophy velocity and cognition diagnosis
+% evaluate results, see if related and when in time (prospective? )
+%lastly causal analysis with confounders, untnlge the relationship
+
+
+
+%MRI 
+%A review of structural magnetic resonance neuroimaging
+
+\section{Results}
+
+We study the distribution of atrophy (Figure \ref{fig:hist})
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[height=1.8in]{figures/inpaper/hist_12}
+        \caption{Histogram of atrophy between years 2 and 1.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[height=1.8in]{figures/inpaper/hist_23}
+        \caption{Histogram of atrophy between years 3 and 2.}
+    \end{subfigure}%\quad
+    
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[height=1.8in]{figures/inpaper/hist_34}
+        \caption{Histogram of atrophy between years 4 and 3.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[height=1.8in]{figures/inpaper/hist_45}
+        \caption{Histogram of atrophy between years 5 and 4.}
+    \end{subfigure}%\quad
+\caption{.}
+\label{fig:hist}
+\end{figure}
+
+Table \ref{tab:atrophyyears} shows the $\mu + \sigma$ of the interannual atrophy. The percentage of inter-annual loss is consistently around the $-0.5\%, -0.5 \pm  0.6$.
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ 2-1 & 3-2 & 4-3 & 5-4  \\ [0.5ex] 
+ \hline\hline
+ $-0.568 \pm 0.653$ & $-0.545 \pm 0.593$  & $-0.584 \pm 0.634$ & $-0.591 \pm 0.601$\\ [0.5ex] 
+ \hline
+\end{tabular}
+ \label{tab:atrophyyears}
+\end{center}
+
+
+We build the correlation matrix between atrophy in consecutive years and diagnosis in last year ( $r(\Delta(V)_{i,i+1},C_{i+1})$). The matrix shown in Figure \ref{fig:heatmap_atro_dx} has as dimension $n-1 \times n$ where $n, n=5$ is the number diagnosis (one each year), the number of atrophies is therefore $n-1$. Thus, a subject with 5 diagnosis (from year 1 to year 5) will have 5 atrophy values $\Delta(V)_{21}$, $\Delta(V)_{32}$, $\Delta(V)_{43}$, AND $\Delta(V)_{54}$. 
+
+\begin{figure}[!hbt]
+        \centering
+        \includegraphics[keepaspectratio, width=.8\linewidth]{figures/inpaper/heat_atrophydx1-5_corr}
+        \caption{Correlation between the inter-annual atrophy (percentage of brain loss) and the diagnosis (0 healthy,1 MCI ,2 AD). The rows represent the brain atrophy between two consecutive years and the columns represent the diagnosis for each year. The correlation between atrophy and the diagnosis tend to increment in time, that is, see for example third row.} 
+        \label{fig:heatmap_atro_dx}
+\end{figure}
+
+
+
+
+% Here matrix atrophy and diagnosis
+
+Next we study the causal link between atrophy and cognition taking into account age and APOE as confounder or mediators.
+We use do calculus to assess the causal link between atrophy and cognition.
+
+%------------------------------------------------
+
+\section{Discussion}
+Despite sometimes conflicting evidence, the common line is this: "Brain volume loss is an inevitable feature of “normal” ageing, with rates of loss increasing with comorbidity and advancing age." However, very healthy individuals in the 60–80-year age-range have rates of cerebral loss only slightly in excess of those in individuals decades younger.VALLECAS situation \cite{resnick2003longitudinal} (92 nondemented older adults (age 59-85 years at baseline) Using images from baseline, 2 year, and 4 year follow-up).  suggest slower rates of brain atrophy in individuals who remain medically and cognitively healthy"
+%\subsection{Subsection One}
+
+%A statement requiring citation \cite{Figueredo:2009dg}.
+
+
+%\subsection{Subsection Two}
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
